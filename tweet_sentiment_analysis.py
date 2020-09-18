@@ -6,11 +6,19 @@ auth.set_access_token("1306553325949599745-edjMFM1U0ZLvXOljUTNy9bvbHMKxch", "LmU
 
 api = tweepy.API(auth)
 
-public_tweets = api.search('Donald Trump')
+public_tweets = api.search('Barack Obama')
 
 for tweet in public_tweets:
     print(tweet.text)
     analysis = TextBlob(tweet.text)
     print(analysis.sentiment)
+    # Sentiment
+    if analysis.sentiment.polarity < 0:
+        print("Negative review")
+    elif analysis.sentiment.polarity > 0:
+        print("Positive review")
+    else:
+        print("Neutral review")
+
 
 
