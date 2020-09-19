@@ -13,12 +13,17 @@ for tweet in public_tweets:
     analysis = TextBlob(tweet.text)
     print(analysis.sentiment)
     # Sentiment
-    if analysis.sentiment.polarity < 0:
+    if (analysis.sentiment.polarity < 0):
         print("Negative review")
-    elif analysis.sentiment.polarity > 0:
+    elif (analysis.sentiment.polarity > 0):
         print("Positive review")
     else:
         print("Neutral review")
 
 
 
+# The above code runs in 4 steps:
+#     1) It first imports the twitter API data using tweepy.
+#     2) It then uses TextBlob to tokenize the data.
+#     3) It then sorts out the words which don't have any value to sentiment.
+#     4) On the basis of the words left, it returns whether it has a positive or negative value. It also contains the sensitivity which can grade the output further.
