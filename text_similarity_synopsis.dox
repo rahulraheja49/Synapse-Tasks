@@ -1,0 +1,12 @@
+We start by taking the two sentences to be compared. They can either be taken from user or can be predecided.
+We then use the nltk module to tokenize the sentences. The function 'word_tokenize' is used.
+We create a model of the statements.
+We then use the gensim module function 'Word2Vec' to convert the words to vectors.
+These vectors squares are then added to get the dot product and to get the length of each vector.
+The similarity can then be calculated by finding the cosine of the angle between the two sentence vectors.
+This is done by the formula cos(x) = (a.b)/|a|.|b|
+The output will be an float greater than zero and less than 1.
+
+
+NOTE: To improve the output, we can lemmatize or stem the words so that we get a more nbasic root of the sentence and thus get closer vectors.
+eg.: give->giv and given->giv is the output obtained from the lancaster stemmer, thusproving the two words to be more similar than otherwise.
