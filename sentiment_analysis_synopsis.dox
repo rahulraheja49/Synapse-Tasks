@@ -1,0 +1,7 @@
+First, we start by getting the data from Twitter API.
+To access Twitter API, we have to create a twitter developer account.
+Data is collected using the python module tweepy.
+On collecting the data, we can further derive specifics from it as it is in the form of objects.
+Now, using the module textblob, we have a direct function "TextBlob" that performs sentiment analysis. This is done by first tokenizing the input string and then removing the words that have no value on the sentiment of a string.
+The rest of the words are lemmatized and checked if they have a positive or negative impact on the statement.
+Then, using the 'sentiment' function, we get the polarity and subjectivity of the sentence and you can use your own grading system further.
